@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Fundamenetals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Selectors */
+
+      /* named selector,
+      class 
+      id,
+      universal,
+      Attribute selector */
+
+      /* name selector */
+      h2 {
+        font-size: 60px;
+        color: #895a5a;
+        font-family: "Lato", sans-serif;
+        font-weight: 900;
+      }
+
+      span {
+        background-color: rgb(0 0 255);
+        color: rgb(255 255 255);
+        padding: 10px;
+      }
+
+      /* id selector */
+      #first {
+        font-size: 20px;
+      }
+
+      /* class selector */
+      .item {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      /* attribute selector */
+
+      a[href="https://www.google.com/"]
+      {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20px;
+        color: aqua;
+      }
+
+      /* universal selector */
+      * {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- inline css -->
+    <h1 style="background-color: red; color: green">CSS Fundamenetals</h1>
+
+    <!-- internal css -->
+    <h2>internal css</h2>
+    <p class="item">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit rem maxime
+      doloremque quas dolor <span>facilis </span>laudantium pariatur illo eum
+      harum fugit voluptate quod dolorem reprehenderit aliquid
+      <span>aperiam,</span> aperiam, earum provident alias?
+    </p>
+    <li id="first">first item</li>
+    <li class="item second">sencond item</li>
+    <li class="item">third item</li>
+
+    <a href="https://www.google.com/">google </a>
+    <a
+      href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"
+      >facebook</a
+    >
+
+    <!-- external css -->
+  </body>
+</html>

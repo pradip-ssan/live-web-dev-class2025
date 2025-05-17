@@ -1,0 +1,84 @@
+/* Global Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Attribute Selector: Target only developers */
+.card[data-role="developer"] {
+  border-left: 5px solid #2196f3;
+}
+
+/* :not Pseudo-Class: Style cards that are NOT developers */
+.card:not([data-role="developer"]) {
+  border-left: 5px solid #e91e63;
+}
+
+/* Basic Card Style */
+.card {
+  background: white;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+/* Pseudo-class :hover */
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Pseudo-elements: Decorative Ribbon */
+.card::before {
+  content: "★";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: gold;
+  font-size: 1.2rem;
+}
+
+/* Pseudo-class :nth-child */
+.card:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Pseudo-class :has (only works in latest browsers) */
+.card:has(img[alt*="Rahul"]) {
+  border-color: purple;
+}
+
+/* Contact Button */
+.contact {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* ::selection styling */
+.card::selection,
+.card *::selection {
+  background: yellow;
+  color: black;
+}
+
+/* Add a tooltip using ::after */
+.card h2::after {
+  content: " - Team Member";
+  font-size: 0.8rem;
+  color: gray;
+}
