@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced css selectors</title>
+    <style>
+      /* descendant selecotr */
+      body .first {
+        color: rgb(255 0 0);
+      }
+
+      body .first:hover {
+        cursor: pointer;
+        font-size: 50px;
+      }
+
+      /* chind selector */
+      .list > #second {
+        color: blue;
+      }
+      ul > li {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        list-style-type: none;
+      }
+
+      /* sibling selector */
+
+      h1 + P {
+        background-color: aqua;
+        border-left: 2px solid #000000;
+        padding: 10px 0px 10px 20px;
+        margin-bottom: 30px;
+      }
+
+      /* general sibling */
+
+      h1 ~ ul {
+        background-color: aqua;
+      }
+
+      ul > li:nth-child(2) {
+        font-size: 30px;
+      }
+
+      ul > li::before {
+        content: " >>> ";
+      }
+
+      /* pseudo element */
+
+      p::first-letter {
+        font-size: 40px;
+        color: red;
+      }
+
+      body {
+        background-image: url(../../images/college_bg.png);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>heading</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet hic
+      culpa, odio nam blanditiis necessitatibus maiores beatae maxime omnis
+      voluptatum.
+    </p>
+    <ul class="list">
+      <li class="first">first item</li>
+      <li id="second">second item</li>
+      <li>thirsd item</li>
+    </ul>
+  </body>
+</html>
