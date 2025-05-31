@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack MERN Course</title>
+    <style>
+      :root {
+        --primary-color: blue;
+        --light-gray: #f4f4f4;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: white;
+        color: #333;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background-color: var(--light-gray);
+      }
+
+      .hero iframe {
+        max-width: 100%;
+        height: 300px;
+        margin-top: 1rem;
+        order: -1;
+      }
+
+      .topics {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 2rem;
+        background-color: #fff;
+      }
+
+      .card {
+        background: #fafafa;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .why-join {
+        background: var(--light-gray);
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+        padding: 2rem;
+        background: #fff;
+      }
+
+      .testimonial {
+        background: #fefefe;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .tabs {
+        padding: 2rem;
+      }
+
+      .tab-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .tab-buttons button {
+        padding: 0.5rem 1rem;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 5px;
+        background: #fafafa;
+      }
+
+      @media (min-width: 768px) {
+        .hero {
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 2rem;
+        }
+
+        .hero iframe {
+          flex: 1;
+          height: 350px;
+          order: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Full Stack MERN Web Development Course</h1>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2>Become a Full Stack Developer</h2>
+        <p>
+          Learn MongoDB, Express.js, React, and Node.js in one powerful course.
+        </p>
+      </div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/oeqPrUmVz-o?si=MuuC49ss9olG4Jz3"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <section class="topics">
+      <div class="card">HTML, CSS, JavaScript</div>
+      <div class="card">Node.js & Express.js</div>
+      <div class="card">React.js</div>
+      <div class="card">MongoDB</div>
+      <div class="card">REST APIs</div>
+      <div class="card">Authentication</div>
+    </section>
+
+    <section class="why-join">
+      <h2>Why Join Our Course?</h2>
+      <p>
+        Industry experts, real-world projects, live mentorship, and career
+        support.
+      </p>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonial">
+        <strong>Amit</strong>
+        <p>
+          This course changed my career. I landed a job as a developer in 3
+          months!
+        </p>
+      </div>
+      <div class="testimonial">
+        <strong>Rohan</strong>
+        <p>
+          The projects are hands-on and very realistic. Loved the mentorship
+          sessions!
+        </p>
+      </div>
+    </section>
+
+    <section class="tabs">
+      <div class="tab-buttons">
+        <button onclick="showTab('overview')">Overview</button>
+        <button onclick="showTab('modules')">Modules</button>
+        <button onclick="showTab('projects')">Projects</button>
+      </div>
+
+      <div id="overview" class="tab-content active">
+        <p>
+          This course is structured to take you from beginner to advanced full
+          stack developer.
+        </p>
+      </div>
+      <div id="modules" class="tab-content">
+        <ul>
+          <li>Frontend Fundamentals</li>
+          <li>Backend Development</li>
+          <li>Database Design</li>
+          <li>Authentication</li>
+          <li>Deployment</li>
+        </ul>
+      </div>
+      <div id="projects" class="tab-content">
+        <ul>
+          <li>Blog Platform</li>
+          <li>E-commerce Website</li>
+          <li>Chat App</li>
+        </ul>
+      </div>
+    </section>
+
+    <script>
+      function showTab(id) {
+        const tabs = document.querySelectorAll(".tab-content");
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+      }
+    </script>
+  </body>
+</html>
