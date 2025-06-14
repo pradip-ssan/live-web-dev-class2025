@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive website</title>
+    <style>
+      /* header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav ul {
+        list-style-type: none;
+        display: none;
+      }
+
+      nav:hover ul {
+        display: block;
+      }
+      video {
+        width: 100%;
+      }
+
+      @media (min-width: 640px) {
+        nav p {
+          display: none;
+        }
+        nav ul {
+          display: flex;
+          gap: 10px;
+        }
+      }
+
+      @media (min-width: 960px) {
+      }
+
+      @media (min-width: 1200px) {
+      }
+
+      /* hero section */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2><a href="#"> Logo</a></h2>
+      <nav>
+        <p>❎</p>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">Project</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="hero-section">
+      <video
+        src="https://cdn.pixabay.com/video/2025/06/03/283533_large.mp4"
+        controls
+      ></video>
+      <div>
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+          suscipit.
+        </h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae magnam
+          eius recusandae, commodi accusamus unde aperiam perspiciatis debitis
+          nihil libero sint nesciunt, dolorum voluptatibus est mollitia aliquid
+          error obcaecati iure?
+        </p>
+        <button>get started</button>
+      </div>
+    </div>
+  </body>
+</html>

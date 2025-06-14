@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+      .parent {
+        width: 400px;
+        height: 400px;
+        background-color: rgb(49, 49, 134);
+      }
+      .child {
+        width: 50%;
+        height: 50%;
+        background-color: aqua;
+        /* transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0.6, -0.28, 0.38, 1.26);
+        transition-delay: 2s; */
+        /* transition: transform 1s ease-in 2s; */
+      }
+
+      .parent:hover .child {
+        /* transform: translate(100%);
+        background-color: aquamarine; */
+
+        animation-name: l-to-r;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-delay: 2s;
+      }
+
+      @keyframes l-to-r {
+        0% {
+          background-color: antiquewhite;
+        }
+        25% {
+          transform: translate(0%, 100%);
+        }
+        50% {
+          transform: translate(100%, 100%);
+        }
+        75% {
+          transform: translate(100%, 0%);
+        }
+
+        100% {
+          transform: translate(100%, 0%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

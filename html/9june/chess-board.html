@@ -7,8 +7,10 @@
     <style>
       .chess-container {
         display: grid;
-        grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
-        grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+        /* grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px; */
+        grid-template-columns: repeat(8, 50px);
+        grid-template-rows: repeat(8, 50px);
       }
       .chess-container div {
         width: 50px;
